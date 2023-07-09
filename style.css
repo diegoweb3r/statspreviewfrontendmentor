@@ -28,8 +28,8 @@ body {
 
 .cardContainer {
     background-color: var(--dark-desatured-blue-cardbg);
-    width: 60%;
-    height: 500px;
+    min-width: 70%;
+    height: 450px;
     border-radius: 8px;
     display: flex;
     margin-bottom: 16px;
@@ -42,16 +42,14 @@ body {
 }
 
 
-
-
 .cardContainer .textContainer {
     width: 50%;
     height: 100%;
-    padding: 90px 120px 10px 80px;
+    padding: 60px 100px 0 60px;
 }
 
 .cardContainer h1 {
-    color: var(--white-mainheadstats)
+    color: var(--white-mainheadstats);
 }
 
 .cardContainer .highlight {
@@ -60,13 +58,14 @@ body {
 
 .cardContainer .descriptionText {
     color: var(--transparent-white-mainpg);
-    margin: 40px 0 70px;
+    font-weight: 100;
+    margin-top: 30px;
     line-height: 26px;
 }
 
 .cardContainer .numbersContainer {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 60px;
     padding: 0 50px 0 0;
     display: flex;
     justify-content: space-between;
@@ -76,15 +75,16 @@ body {
 }
 
 .cardContainer .numbersContainer .number {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 800;
     color: var(--white-mainheadstats);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .cardContainer .numbersContainer .text {
-    letter-spacing: 2px;
-    font-size: 12px;
+    letter-spacing: 1px;
+    font-size: 10px;
+    font-family: "Lexend Deca", sans-serif;
 }
 
 
@@ -93,7 +93,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
-    
     border-radius: 0 8px 8px 0;
     filter: brightness();
 }
@@ -112,15 +111,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -131,5 +121,45 @@ body {
 }
 
 
+@media (max-width: 790px) {
+    .cardContainer .textContainer{
+        padding: 20px 50px 0 40px;
+    }
+}
 
-@media (max-width: 375px) {}
+@media (max-width: 618px) {
+    .cardContainer{
+        width: 90%;
+        height: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .cardContainer .textContainer{
+        text-align: center;
+        width: 100%;
+    }
+    .cardContainer .textContainer .descriptionText{
+        padding: 0 70px;
+    }
+
+    .cardContainer .numbersContainer{
+        flex-direction: column;
+        gap: 16px;
+        padding: 0;
+        margin-top: 16px;
+    }
+    .cardContainer .numbersContainer .numbers .number{
+        font-size: 36px;
+    }
+    .cardContainer .imgContainer{
+        width: 100%;
+        height: 50%;
+        border-radius: 16px 16px 0 0;
+    }
+    .cardContainer .imgContainer::before{
+        border-radius: 16px 16px 0 0;
+    }
+
+}
